@@ -1,5 +1,5 @@
 var mysql = require('mysql');
-//  Inside the `orm.js` file create the code that will execute MySQL commands
+// Inside the `connection.js` setup the code to connect Node to MySQL
 var connection = mysql.createConnection({
     port: 3306,
     host: 'localhost',
