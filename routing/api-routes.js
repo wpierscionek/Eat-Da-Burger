@@ -1,5 +1,9 @@
-module.exports = function(app) {
-	app.get('/api/index', function(request, response){
-		response.json(users)
-	})
+var path = require('path');
+var orm = require('../config/orm.js');
+
+console.log(" api connected");
+
+
+module.exports = function(app){
+	// 
 }
