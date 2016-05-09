@@ -1,1 +1,28 @@
-<h1>{{allBurgersData}}</h1>
+<div class="col-md-12 text-center">
+	<h1>Current Orders</h1>
+	<ul class="burgers">
+		{{#each allBurgersData}}
+		{{#unless this.devoured}}
+			<li>{{this.burger_name}}
+			<form method="POST" action="/eat?_method=PUT">
+				<button type="submit" name="burgerName" value={{this.burger_name}} class="btn btn-danger center-block">Devour it!</button>
+				</form>
+				<hr>
+			</li>
+			{{/unless}}
+		{{/each}}
+	</ul>
+</div>
+
+<div class="col-md-12 text-center">
+	<h1>Devoured Burgers</h1>
+	<ul class="devoured-burgers">
+		{{#each allBurgersData}}
+			{{#if this.devoured}}
+				<li>
+					{{this.burger_name}}
+				</li>
+			{{/if}}
+		{{/each}}
+	</ul>
+</div>

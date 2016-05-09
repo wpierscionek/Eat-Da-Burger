@@ -1,0 +1,36 @@
+body {
+    background-color: #1a1a1a;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+.header {
+    background: url('../../images/background.jpg') center fixed no-repeat;
+    background-size: cover;
+    height: 700px;
+}
+
+.intro {
+	font-size: 80px;
+    padding-top: 250px;
+    color: white;
+}
+
+.container {
+    color: white;
+    font-size: 30px;
+}
+
+.burgers {
+    list-style: none;
+    text-align: left;
+}
+
+.btn-danger {
+    margin-left: 70%;
+}
+footer{
+	color: white;
+}

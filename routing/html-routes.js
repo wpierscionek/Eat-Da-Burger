@@ -8,6 +8,7 @@ module.exports = function(app) {
 
         orm.allBurgers(function(allBurgersData) {
             response.render('index', { allBurgersData });
+            // console.log(allBurgersData);
         })
-    })
+    });
 }
