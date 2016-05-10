@@ -1,22 +1,23 @@
 var connection = require('./connection.js');
-console.log("orm connected");
+// console.log("orm connected");
 
 
 var orm = {
 
     allBurgers: function(callback) {
-        var s = 'SELECT burger_name FROM burgers ORDER BY time desc';
+        var s = 'SELECT id, burger_name, devoured, time FROM burgers ORDER BY time desc';
         connection.query(s, function(err, allBurgersData) {
             if (err) {
                 throw err;
             }
             callback(allBurgersData)
+                // console.log("all burgers");
         });
     },
 
-    addBurger: function(addBurger, callback) {
+    addBurger: function(newBurger, callback) {
         var s = 'INSERT INTO burgers (burger_name, devoured) VALUES (?, ?)';
-        connection.query(s, [addBurger, false], function(err, result) {
+        connection.query(s, [newBurger, 0], function(err, result) {
             if (err) {
                 throw err;
             }
@@ -25,13 +26,13 @@ var orm = {
         });
     },
 
-    eatBurger: function(burgerName, callback) {
-        var s = 'UPDATE burgers SET devoured=true WHERE burger_name = ?';
-        connection.query(s, [burgerName], function(err, result) {
+    eatBurger: function(burgerId, callback) {
+        var s = 'UPDATE burgers SET devoured=1 WHERE id = ?';
+        connection.query(s, [burgerId], function(err, result) {
             if (err) {
                 throw err;
             }
-            console.log("deleted " + burgerName);
+            console.log("deleted " + burgerId);
             callback();
         })
     }

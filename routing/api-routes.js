@@ -1,7 +1,7 @@
 var path = require('path');
 var orm = require('../config/orm.js');
 
-console.log(" api connected");
+// console.log(" api connected");
 
 
 module.exports = function(app) {
@@ -17,7 +17,7 @@ module.exports = function(app) {
 
     app.put('/eat', function(request, response) {
 
-        orm.eatBurger(request.body.burgerName, function() {
+        orm.eatBurger(request.body.burgerId, function() {
             response.redirect('/');
         })
     })

@@ -6,7 +6,7 @@ var connection = mysql.createConnection({
     password: 'password',
     database: 'burgers_db'
 });
-console.log("mysql connected");
+// console.log("mysql connected");
 
 
 connection.connect(function(err) {

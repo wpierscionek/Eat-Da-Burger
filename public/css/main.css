@@ -13,7 +13,7 @@ h1 {
 }
 
 .intro {
-	font-size: 80px;
+    font-size: 80px;
     padding-top: 250px;
     color: white;
 }
@@ -23,7 +23,8 @@ h1 {
     font-size: 30px;
 }
 
-.burgers {
+.burgers,
+.devoured-burgers {
     list-style: none;
     text-align: left;
 }
@@ -31,6 +32,7 @@ h1 {
 .btn-danger {
     margin-left: 70%;
 }
-footer{
-	color: white;
+
+footer {
+    color: white;
 }
