@@ -1,9 +1,9 @@
 var mysql = require('mysql');
 var connection = mysql.createConnection({
-    // port: 3306, //standart port for mysql
-    host: 'localhost',
-    user: 'root',
-    password: 'password',
+    port: 3306,
+    host: 'l9dwvv6j64hlhpul.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    user: 'behxlozpv741aybs',
+    password: 'rd8a9ifnbbrl7jlp',
     database: 'burgers_db'
 });
 // console.log("mysql connected");
