@@ -38,7 +38,7 @@ app.set('view engine', 'handlebars');
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs. 
 // ================================================================================
 
-require('./routing/api-routes.js')(app); 
+// require('./routing/api-routes.js')(app); 
 require('./routing/html-routes.js')(app);
 
 // ==============================================================================
